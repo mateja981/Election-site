@@ -1,0 +1,904 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: sans-serif;
+}
+
+
+@font-face {
+  font-family: down-icons;
+  src: url("data:application/x-font-ttf;charset=utf-8;base64,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") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+
+
+body {
+  min-height: 100%;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+  font-family: var(--noto-sans);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: block;
+}
+
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+html.w-mod-touch * {
+  background-attachment: scroll !important;
+}
+
+.w-block {
+  display: block;
+}
+
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.w-hidden {
+  display: none;
+}
+
+.w-button {
+  color: #fff;
+  line-height: inherit;
+  cursor: pointer;
+  background-color: #3898ec;
+  border: 0;
+  border-radius: 0;
+  padding: 9px 15px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+input.w-button {
+  -webkit-appearance: button;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 38px;
+  line-height: 44px;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+h4 {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h5 {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h6 {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+a {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 40px;
+}
+
+.w-button {
+  color: #fff;
+  line-height: inherit;
+  cursor: pointer;
+  background-color: #3898ec;
+  border: 0;
+  border-radius: 0;
+  padding: 9px 15px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.w-input, .w-select {
+  width: 100%;
+  height: 38px;
+  color: #333;
+  vertical-align: middle;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  display: block;
+}
+
+
+.w-form-label {
+  cursor: pointer;
+  margin-bottom: 0;
+  font-weight: normal;
+  display: inline-block;
+}
+
+
+:root {
+  --red-basic: #c6363c;
+  --playfair: "Playfair Display", sans-serif;
+  --white: #fff;
+  --blue: #0c4076;
+  --yellow: #edb92e;
+  --noto-sans: "Noto Sans", sans-serif;
+  --black: #21231e;
+  --red-dark: #a12d2e;
+  --darker: rgba(0, 0, 0, .65);
+}
+
+.class-a {
+  width: 100%;
+  height: 10vh;
+  background-color: var(--red-basic);
+  font-family: var(--playfair);
+  color: var(--white);
+  text-align: left;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+}
+
+.class-b {
+  height: 6vh;
+  background-color: var(--blue);
+  position: relative;
+}
+
+.class-c {
+  width: 50vw;
+  height: 77vh;
+  border: 2px solid var(--yellow);
+  border-radius: 0;
+  padding-left: 1vw;
+  display: block;
+  overflow: auto;
+}
+
+.class-d {
+  height: 20vh;
+  overflow: auto;
+}
+
+.class-e {
+  height: 52vh;
+  border: 2px solid var(--yellow);
+  margin-top: 5vh;
+  overflow: auto;
+}
+
+.class-cde {
+  height: 100vh;
+  grid-column-gap: 5vw;
+  background-color: var(--white);
+  justify-content: space-between;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding-top: 5vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  display: flex;
+  position: relative;
+  overflow: visible;
+}
+
+.class-de {
+  width: 30vw;
+  overflow: hidden;
+}
+
+
+
+/* NAVBAR */
+
+
+ .third-level-menu
+{
+    position: absolute;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    z-index: 999;
+}
+
+.third-level-menu > li
+{
+    padding-top:5px;
+    padding-bottom: 5px;
+    background: #06203b;
+
+}
+.third-level-menu > li:hover { background: #06203b; }
+
+.second-level-menu
+{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 180px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.second-level-menu > li
+{
+    padding-top:5px;
+    position: relative;
+    padding-bottom: 5px;
+    background: #092f57;
+    z-index: 998;
+}
+.second-level-menu > li:hover { background: #092f57; }
+
+.top-level-menu
+{
+    list-style: none;
+    padding-right: 10vw;
+    margin: 0;
+    width:100%;
+    height: 6vh;
+    display: flex;
+    justify-content: right;
+    line-height: 16px;
+    align-items: center;
+}
+
+.top-level-menu > li
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    float: left;
+    padding-right: 20px;
+    background: var(--blue);
+}
+.top-level-menu > li:hover { background: var(--blue); }
+
+.top-level-menu li:hover > ul
+{
+    /* On hover, display the next level's menu */
+    display: inline;
+}
+
+
+/* Menu Link Styles */
+
+.top-level-menu a /* Apply to all links inside the multi-level menu */
+{
+    width: 100%;
+    font-family: var(--noto-sans);
+    color: var(--yellow);
+    text-decoration: none;
+    padding: 0 0 0 10px;
+
+    /* Make the link cover the entire list item-container */
+    display: block;
+    line-height: 30px;
+}
+.top-level-menu a:hover { color: var(--yellow); }
+
+
+
+
+
+.search-button {
+  background-color: var(--yellow);
+  border-radius: 10px;
+  font-family: Noto Sans, sans-serif;
+}
+
+.search-label {
+  font-family: var(--noto-sans);
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: block;
+}
+
+.search-input {
+  font-family: var(--noto-sans);
+}
+
+.municipalities {
+  display: block;
+}
+
+.municipality {
+  margin-bottom: 20px;
+  overflow: visible;
+}
+
+.municipality-name {
+  font-family: var(--playfair);
+  color: var(--black);
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.municipality-name.bigger {
+  font-size: 35px;
+  line-height: 45px;
+}
+
+.party {
+  font-family: var(--playfair);
+  color: var(--red-basic);
+  font-size: 18px;
+  list-style-type: decimal;
+}
+
+.party.bigger {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.percentage-of-votes {
+  color: var(--yellow);
+}
+
+.site-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+.background-image-left {
+  width: 17%;
+  height: 100vh;
+  object-fit: cover;
+  padding-top: 15vh;
+  position: static;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+}
+
+.background-images {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  position: fixed;
+}
+
+.background-image-right {
+  width: 45%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+
+
+.div-block {
+  padding-left: 10px;
+}
+
+.scroll-div {
+  overflow: visible;
+}
+
+
+
+.class-f {
+  padding-top: 3vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.resaults-heading {
+  font-family: var(--playfair);
+  color: var(--red-dark);
+  text-align: center;
+  margin-top: 0;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 52px;
+}
+
+.letters {
+  margin-bottom: 3vh;
+}
+
+.letters-row {
+  justify-content: space-between;
+  display: flex;
+}
+
+.letter-link {
+  color: var(--black);
+  font-family: Noto Sans, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+.dropdown-list-municipality {
+  background-color: rgba(221, 221, 221, 0);
+  position: static;
+}
+
+.dropdown-toggle-manicipality {
+  padding-top: 0;
+  padding-bottom: 10px;
+  padding-left: 0;
+}
+
+.dropdown-block {
+  display: block;
+}
+
+.h3-manicipalities {
+  color: var(--blue);
+  text-align: center;
+  font-family: Noto Sans, sans-serif;
+  font-size: 37px;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+.party-div {
+  justify-content: space-between;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.party-card {
+  width: 30%;
+  height: 20vh;
+  background-color: var(--red-dark);
+  background-image: url("https://assets-global.website-files.com/6553c46b54f14682be936a2c/655b6dd3478738c309bcb304_zastava-srbije-serbian-flag-srpska-zastava.jpg"), linear-gradient(135deg, rgba(161, 45, 46, 0), rgba(168, 60, 61, 0) 59%, rgba(255, 255, 255, .11));
+  background-position: 0 0, 0 0;
+  background-size: auto, auto;
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  box-shadow: 6px 7px 5px 3px rgba(0, 0, 0, .4);
+}
+
+.party-card.blue {
+  background-color: var(--blue);
+}
+
+.party-card.blue._2 {
+  background-image: linear-gradient(to bottom, var(--darker), var(--darker)), url("https://assets-global.website-files.com/6553c46b54f14682be936a2c/655b6dd3478738c309bcb304_zastava-srbije-serbian-flag-srpska-zastava.jpg");
+  background-position: 0 0, 50% 0;
+  background-size: auto, 300%;
+}
+
+.party-card.blue._5 {
+  background-image: linear-gradient(to bottom, var(--darker), var(--darker)), url("https://assets-global.website-files.com/6553c46b54f14682be936a2c/655b6dd3478738c309bcb304_zastava-srbije-serbian-flag-srpska-zastava.jpg");
+  background-position: 0 0, 50%;
+  background-size: auto, 300%;
+}
+
+.party-card.blue._8 {
+  background-image: linear-gradient(to bottom, var(--darker), var(--darker)), url("https://assets-global.website-files.com/6553c46b54f14682be936a2c/655b6dd3478738c309bcb304_zastava-srbije-serbian-flag-srpska-zastava.jpg");
+  background-position: 0 0, 50% 100%;
+  background-size: auto, 300%;
+}
+
+.party-card.white {
+  background-color: #d3d3d3;
+  background-image: linear-gradient(to bottom, var(--darker), var(--darker)), url("https://assets-global.website-files.com/6553c46b54f14682be936a2c/655b6dd3478738c309bcb304_zastava-srbije-serbian-flag-srpska-zastava.jpg");
+  background-position: 0 0, 100% 100%;
+  background-size: auto, 300%;
+}
+
+.party-card.white._3 {
+  background-image: linear-gradient(to bottom, var(--darker), var(--darker)), url("https://assets-global.website-files.com/6553c46b54f14682be936a2c/655b6dd3478738c309bcb304_zastava-srbije-serbian-flag-srpska-zastava.jpg");
+  background-position: 0 0, 100% 0;
+  background-size: auto, 300%;
+}
+
+.party-card.white._6 {
+  background-image: linear-gradient(to bottom, var(--darker), var(--darker)), url("https://assets-global.website-files.com/6553c46b54f14682be936a2c/655b6dd3478738c309bcb304_zastava-srbije-serbian-flag-srpska-zastava.jpg");
+  background-position: 0 0, 100%;
+  background-size: auto, auto;
+}
+
+.party-card.white.small {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.party-card._1 {
+  background-image: linear-gradient(to bottom, var(--darker), var(--darker)), url("https://assets-global.website-files.com/6553c46b54f14682be936a2c/655b6dd3478738c309bcb304_zastava-srbije-serbian-flag-srpska-zastava.jpg");
+  background-position: 0 0, 0 0;
+  background-size: auto, 300%;
+}
+
+.party-card._4 {
+  background-image: linear-gradient(to bottom, var(--darker), var(--darker)), url("https://assets-global.website-files.com/6553c46b54f14682be936a2c/655b6dd3478738c309bcb304_zastava-srbije-serbian-flag-srpska-zastava.jpg");
+  background-position: 0 0, 0%;
+  background-size: auto, 300%;
+}
+
+.party-card._7 {
+  background-image: linear-gradient(to bottom, var(--darker), var(--darker)), url("https://assets-global.website-files.com/6553c46b54f14682be936a2c/655b6dd3478738c309bcb304_zastava-srbije-serbian-flag-srpska-zastava.jpg");
+  background-position: 0 0, 0 100%;
+  background-size: auto, 300%;
+}
+
+.party-card.small {
+  width: 20%;
+  background-image: none;
+}
+
+.party-heading {
+  font-family: var(--playfair);
+  color: var(--yellow);
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.percentage-text {
+  font-family: var(--noto-sans);
+  color: var(--white);
+  text-align: center;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 70px;
+}
+
+.percentage-text.small {
+  font-size: 40px;
+}
+
+.parties-div {
+  margin-top: 3vh;
+  margin-bottom: 5vh;
+}
+
+.news-time {
+  font-family: var(--noto-sans);
+  color: var(--red-dark);
+}
+
+
+
+@media screen and (max-width: 991px) {
+  .class-b {
+    width: 100%;
+    height: 16vh;
+  }
+
+  .class-c {
+    width: 100%;
+    height: 600px;
+  }
+
+  .class-d {
+    width: 100%;
+  }
+
+  .class-e {
+    display: none;
+  }
+
+  .class-cde {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .class-de {
+    width: 100%;
+    height: 250px;
+  }
+
+  .navlink {
+    display: block;
+  }
+
+  .navbar-default {
+    display: flex;
+     flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-default.admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-default.controller {
+    display: flex;
+     flex-direction: column;
+    align-items: center;
+  }
+
+  .municipalities {
+    flex-direction: column;
+    align-items: flex-start;
+    display: block;
+  }
+
+  .background-images {
+    display: none;
+  }
+
+  .body {
+    height: auto;
+  }
+
+  .search {
+    margin-top: 5vh;
+  }
+
+  .nav-menu {
+    background-color: var(--blue);
+  }
+
+  .dropdown-toggle {
+    padding-
+	: 20px;
+    padding-bottom: 20px;
+  }
+
+  .dropdown-link {
+    font-family: var(--noto-sans);
+  }
+
+  .navbar-icon {
+    color: var(--yellow);
+  }
+
+  .menu-button {
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .menu-button:hover {
+    background-color: var(--red-basic);
+    border-radius: 20px;
+    display: block;
+  }
+
+}
+
+
+.backgroung-image-login {
+  z-index: 1;
+  min-height: 100vh;
+  min-width: 100%;
+  object-fit: cover;
+  position: static;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.body-login {
+  height: 100vh;
+  background-image: url("https://assets-global.website-files.com/6553c46b54f14682be936a2c/655b6dd3478738c309bcb304_zastava-srbije-serbian-flag-srpska-zastava.jpg") ;
+  background-position: 50%;
+  background-attachment: fixed;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.login-div {
+  flex-direction: column;
+  width: 500px;
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(12, 64, 118, .55);
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  box-shadow: 8px 6px 5px rgba(0, 0, 0, .2);
+  margin-top: 30vh;
+  position: absolute;
+  z-index: 1;
+}
+
+.login-field {
+  color: #edb92e;
+  margin-bottom: 10px;
+  font-family: var(--noto-sans);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.login-field.register {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 20px;
+  display: block;
+}
+
+.login-text-field {
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-family: var(--noto-sans);
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 200;
+}
+
+.login-text-field.down {
+  margin-bottom: 20px;
+}
+
+.login-btn {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #edb92e;
+  border-radius: 10px;
+  font-family: var(--noto-sans);
+  font-size: 15px;
+  line-height: 20px;
+  padding-inline:15px;
+  padding-block: 10px;
+  display: block;
+}
+
+
+.cont-div {
+  z-index: 2;
+  background-color: #f7f7f7;
+  padding-top: 22vh;
+  padding-left: 12vw;
+  padding-right: 5vw;
+  position: absolute;
+  overflow: hidden;
+}
+
+.cont-info {
+  margin-bottom: 30px;
+  overflow: auto;
+}
+
+.cont-mail {
+  color: #bb4e4e;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 42px;
+  text-decoration: none;
+  display: block;
+}
+
+.cont-name {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.human-image {
+  width: 10vw;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-top: 5px;
+}
+
+.text-field {
+  border-radius: 10px;
+}
+
+.field-label {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.party-name {
+  font-size: 15px;
+}
+
+.update {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.upade-text {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.title-all {
+  color: #bb4e4e;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 36px;
+  text-decoration: none;
+}
+
+.info-text {
+  margin-bottom: 5px;
+  font-size: 20px;
+  line-height: 25px;
+}
